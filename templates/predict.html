@@ -1,0 +1,29 @@
+{% extends 'dashboard/base_dashboard.html' %}
+
+{% block content %}
+
+<h3>Sentiment Prediction</h3>
+
+<div class="card p-4 shadow">
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label>Enter Review / Text</label>
+        <textarea name="text" class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button class="btn btn-primary">Run Prediction</button>
+</form>
+
+{% if result %}
+<div class="alert alert-success mt-4">
+    Prediction: <b>{{ result }}</b><br>
+    Confidence: <b>{{ confidence }}</b>
+</div>
+{% endif %}
+
+</div>
+
+{% endblock %}

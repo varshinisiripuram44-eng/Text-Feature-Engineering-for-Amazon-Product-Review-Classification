@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 15px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        header h2 {
+            color: #1e3c72;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 25px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #1e3c72;
+        }
+
+        .btn {
+            padding: 8px 18px;
+            border-radius: 5px;
+            border: 1px solid #1e3c72;
+        }
+
+        .btn-primary {
+            background: #1e3c72;
+            color: #fff;
+        }
+
+        .section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #ffffff;
+            font-size: 42px;
+        }
+
+        .card {
+            background: #ffffff;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .adv-box {
+            background: #f4f6fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .adv-box h4 {
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Build. Predict. Analyze. Grow.</h2>
+    <nav>
+        <a href="/">Home</a>
+        <!-- <a href="#about">About</a>
+        <a href="#advantages">Advantages</a>
+        <a href="#impact">Impact</a> -->
+        <a href="/login/" class="btn">Login</a>
+        <a href="/register/" class="btn btn-primary">Register</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="section hero" id="home">
+    <h1>Text Feature Engineering for Amazon Product Review Classification</h1>
+</section>
+
+<!-- ABSTRACT -->
+<section class="section" id="about">
+    <div class="card">
+        <h3>Project Abstract</h3>
+        <p>Sentiment Analysis is a key task in Natural Language Processing that aims to classify opinions expressed in textual data. With the rapid growth of e-commerce platforms, analyzing customer reviews has become essential for understanding user satisfaction and improving products and services. Traditional machine learning approaches often rely on single feature extraction techniques such as Bag of Words or TF-IDF, which fail to capture contextual and semantic information effectively.
+This project proposes a hybrid sentiment analysis model that integrates both traditional and advanced techniques to improve classification performance on Amazon product reviews. The model combines TF-IDF features with contextual embeddings generated using a pre-trained BERT model to capture both statistical and semantic representations of text. A Convolutional Neural Network (CNN) is employed to extract deep and complex features from the combined feature vectors. Furthermore, an ensemble learning approach using Extra Trees and XGBoost classifiers is applied to enhance robustness and reduce model bias.
+The dataset used consists of over 568,000 Amazon product reviews, which are preprocessed through text cleaning, normalization, and stopword removal. Sentiment labels are derived from review ratings and categorized into positive and negative classes. The proposed model is trained and evaluated using standard performance metrics including accuracy, precision, recall, F1-score, and ROC-AUC.
+Experimental results demonstrate that the hybrid model achieves an accuracy of 91.88%, outperforming traditional and standalone approaches. The integration of multiple techniques enables the model to effectively capture both contextual and semantic information, making it suitable for real-world sentiment analysis applications. The proposed system provides a scalable and efficient solution for analyzing large volumes of customer reviews in e-commerce platforms.
+</p>
+    </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="section" id="advantages">
+    <div class="card">
+        <h3>Advantages of the Project</h3>
+        <div class="advantages-grid">
+            <div class="adv-box">
+                <h4>⚡ Fast Decision Making</h4>
+                <p>Provides real-time analytics to improve business and research decisions.</p>
+            </div>
+            <div class="adv-box">
+                <h4>📊 Accurate Predictions</h4>
+                <p>Uses AI models to generate reliable and data-driven predictions.</p>
+            </div>
+            <div class="adv-box">
+                <h4>🔒 Secure & Scalable</h4>
+                <p>Designed with modern security standards and scalable architecture.</p>
+            </div>
+            <div class="adv-box">
+                <h4>🌐 Easy Accessibility</h4>
+                <p>Web-based platform accessible from anywhere with a simple interface.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIETY IMPACT -->
+<section class="section" id="impact">
+    <div class="card">
+        <h3>How It Helps Current Society</h3>
+        <p>
+            In today's data-driven world, organizations require intelligent systems to analyze
+            large amounts of information. This platform supports industries like healthcare,
+            education, finance, and agriculture by enabling smarter decisions.
+        </p>
+        <p>
+            It empowers startups, researchers, and students by providing AI tools without requiring
+            deep technical expertise, helping democratize artificial intelligence for societal growth.
+        </p>
+    </div>
+</section>
+
+
+</body>
+</html>
